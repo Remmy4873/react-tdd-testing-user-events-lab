@@ -1,23 +1,47 @@
+import profilePic from './Images/Me.jpeg';
+
+
 function App() {
   return (
     <main>
-      <h1>Hi, I'm (your name)</h1>
-      <img alt="My profile pic" src="https://via.placeholder.com/350" />
+      <h1>Hi, I'm Remmy Bett</h1>
+      <img alt="My profile pic" src={profilePic} style={{ width: '350px', height: '350px' }} />
       <h2>About Me</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        I am a web developer skilled with passion for creating responsive and user-friendly websites. With expertise in front-end technologies like HTML, CSS and JavaScript, as well as experience in back-end development. I am dedicated to staying current with latest industry trends.
       </p>
 
       <div>
-        <a href="https://github.com">GitHub</a>
-        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://github.com/Remmy4873">GitHub</a>
+        <a href="https://www.linkedin.com/in/remmy-bett-a25241285/">LinkedIn</a>
       </div>
+
+      <form>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" />
+        </label>
+        <fieldset>
+          <legend>Select your interests:</legend>
+          <label>
+            <input type="checkbox" name="interest" value="coding" />
+            Coding
+          </label>
+          <label>
+            <input type="checkbox" name="interest" value="design" />
+            Design
+          </label>
+          <label>
+            <input type="checkbox" name="interest" value="gaming" />
+            Gaming
+          </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
     </main>
   );
 }
