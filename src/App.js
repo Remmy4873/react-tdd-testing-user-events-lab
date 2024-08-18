@@ -1,14 +1,23 @@
+import React, { useState } from "react";
 import profilePic from './Images/Me.jpeg';
 
-
 function App() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   return (
     <main>
       <h1>Hi, I'm Remmy Bett</h1>
       <img alt="My profile pic" src={profilePic} style={{ width: '350px', height: '350px' }} />
       <h2>About Me</h2>
       <p>
-        I am a web developer skilled with passion for creating responsive and user-friendly websites. With expertise in front-end technologies like HTML, CSS and JavaScript, as well as experience in back-end development. I am dedicated to staying current with latest industry trends.
+        I am a web developer skilled with passion for creating responsive and user-friendly websites.
+        With expertise in front-end technologies like HTML, CSS and JavaScript, as well as experience in back-end development.
+        I am dedicated to staying current with latest industry trends.
       </p>
 
       <div>
@@ -16,7 +25,7 @@ function App() {
         <a href="https://www.linkedin.com/in/remmy-bett-a25241285/">LinkedIn</a>
       </div>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           Name:
           <input type="text" name="name" />
@@ -42,6 +51,7 @@ function App() {
         </fieldset>
         <button type="submit">Submit</button>
       </form>
+      {submitted && <p>Form was submitted successfully</p>}
     </main>
   );
 }

@@ -3,7 +3,6 @@ import '@testing-library/jest-dom';
 import App from "../App";
 
 // Portfolio Elements (existing tests)
-
 // Newsletter Form - Initial State
 test("the form includes text inputs for name and email address", () => {
   render(<App />);
